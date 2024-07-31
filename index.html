@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERNET BANK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="./img/julien-riedel-alGtgU3MQu4-unsplash.jpg" alt="">
+    <div class="container">
+        <div class="container2">
+    <h1>Internet Bank</h1>
+    <h2>Depósitos</h2>
+    <form id="form-deposito">
+        <input id="nome-beneficiario" type="text" placeholder="Nome completo do beneficiário" required />
+        <input id="agencia-deposito" type="text" placeholder="Agência" required />
+        <input id="conta-deposito" type="text" placeholder="Conta" required />
+        <input id="valor-deposito" type="text" placeholder="Valor" required />
+        <textarea id="descricao" placeholder="Descrição(opcional)"></textarea>
+        <button onclick="submit">DEPOSITAR</button>
+    </form>
+    <p id="sucess-message">
+        O montante de: ********* foi enviado para o cliente: <b>********</b> - conta: <b>********</b>
+    </p>
+    </div>
+    </div>
+    
+    
+    <script src="./main.js"></script>
+</body>
+</html>
