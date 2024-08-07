@@ -1,6 +1,13 @@
 const form = document.getElementById('form-deposito'); 
 const nomeBeneficiario = document.getElementById("nome-beneficiario")
+const valor = document.getElementById('valor-deposito')
+const conta = document.getElementById('conta')
 let formEvalido = false;
+function valorOnlyNumber(){
+    const valorValido = document.getElementById('valor-deposito').value
+    return valorValido === "number"
+} // Estou tentando fazer essa função deixar escrever somente números no valor
+
 function validaNome(nomeCompleto){
     const nomeComoArray = nomeCompleto.split(" ");
     return nomeComoArray.length >= 2;
@@ -26,6 +33,7 @@ form.addEventListener('submit', function (e) {
         document.querySelector(".message-error").style.display = "none"
         nomeBeneficiario.style.border = "none";
     //mensagem de sucesso ^
+    form.innerHTML += ""
 }
     else {
         nomeBeneficiario.style.border = "1px solid red";
@@ -34,8 +42,7 @@ form.addEventListener('submit', function (e) {
     }
 })
 
-nomeBeneficiario.addEventListener('keyup', function(e) {
-    console.log(e.target.value);
+nomeBeneficiario.addEventListener('keypress', function(e) {
     formEvalido = validaNome(e.target.value) 
 
     if(!formEvalido) {
@@ -49,4 +56,16 @@ nomeBeneficiario.addEventListener('keyup', function(e) {
         document.querySelector(".message-error").style.display = "none"
     }
 })
+
+/* valor.addEventListener('keypress', function(e){
+    valorENumero = valorOnlyNumber(e.target.value)
+    if(!valorENumero) {
+        console.log('eee')
+    }
+
+}) TENTANDO FZER A FUNÇÃO FUNCIONAR */ 
+
+
+
  
+
